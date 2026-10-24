@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A 96% Hospital Rating, A Baby’s Death, and the Questions That Demand Answers | Davao Civic Society</title>
+    <meta
+      name="description"
+      content="A Davao Civic Society editorial evaluating the tension between hospital performance ratings and accountability after the death of an infant."
+    />
+    <style>
+      :root {
+        --bg: #f4f1eb;
+        --paper: #fbf9f5;
+        --ink: #0d2a24;
+        --deep: #0d3d33;
+        --green: #0e5b4f;
+        --green-soft: rgba(14, 91, 79, 0.1);
+        --gold: #d9b66b;
+        --line: rgba(13, 42, 36, 0.18);
+        --muted: rgba(13, 42, 36, 0.76);
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+      body { display: flex; justify-content: center; padding: 28px 16px; }
+      .container {
+        width: min(1100px, 100%);
+        background: var(--paper);
+        border: 1px solid rgba(13, 42, 36, 0.08);
+        box-shadow: 0 20px 48px rgba(13, 42, 36, 0.04);
+      }
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 22px 30px 18px;
+        border-bottom: 1px solid var(--line);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .brand-mark {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--green), #143d35);
+        position: relative;
+        border: 3px solid var(--gold);
+      }
+      .brand-mark::before {
+        content: "DCS";
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f3d98b;
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+      .brand-name {
+        font-size: 0.88rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--deep);
+        font-weight: 800;
+      }
+      .label {
+        display: inline-block;
+        background: var(--green-soft);
+        border-left: 6px solid var(--green);
+        color: var(--green);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 10px 12px 10px 10px;
+      }
+      .hero { padding: 30px 30px 0; }
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--green);
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(2.6rem, 5vw, 5rem);
+        line-height: 0.96;
+        letter-spacing: -0.06em;
+        color: var(--deep);
+        max-width: 860px;
+      }
+      .deck {
+        margin-top: 20px;
+        max-width: 720px;
+        font-size: clamp(1.08rem, 1.45vw, 1.6rem);
+        line-height: 1.5;
+        color: var(--muted);
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px 28px;
+        margin-top: 24px;
+        color: var(--muted);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .feature {
+        margin-top: 24px;
+        height: 410px;
+        background: linear-gradient(rgba(8, 20, 16, 0.10), rgba(8, 20, 16, 0.12)),
+          url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .content { padding: 30px 30px 12px; }
+      .article {
+        max-width: 760px;
+        margin: 0 auto;
+        font-size: 1.08rem;
+        line-height: 1.8;
+        color: rgba(13, 42, 36, 0.9);
+      }
+      .article p { margin: 0 0 1.5em; }
+      .article h2 {
+        margin: 2.2em 0 0.8em;
+        font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+        color: var(--deep);
+      }
+      .article blockquote {
+        margin: 2em 0;
+        padding: 1.1em 1.2em;
+        background: rgba(14, 91, 79, 0.04);
+        border-left: 5px solid var(--green);
+        color: var(--deep);
+        font-weight: 700;
+      }
+      .article .callout {
+        margin: 2em 0;
+        padding: 1.2em 1.3em;
+        background: rgba(217, 182, 107, 0.12);
+        border: 1px solid rgba(217, 182, 107, 0.35);
+      }
+      .footer-note {
+        padding: 0 30px 30px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      @media (max-width: 700px) {
+        body { padding: 18px 10px; }
+        .topbar, .hero, .content, .footer-note { padding-left: 18px; padding-right: 18px; }
+        .topbar { flex-direction: column; align-items: flex-start; }
+        .feature { height: 260px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark" aria-label="Davao Civic Society logo"></div>
+          <div class="brand-name">Davao Civic Society</div>
+        </div>
+        <div class="label">Editorial</div>
+      </header>
+
+      <section class="hero">
+        <div class="eyebrow">Public Health &amp; Accountability</div>
+        <h1>A 96% Hospital Rating, A Baby’s Death, and the Questions That Demand Answers</h1>
+        <p class="deck">
+          A hospital’s performance rating can reflect institutional achievement. But when a baby dies and families raise questions about delayed medical attention, the public is right to demand facts, not just reassuring language.
+        </p>
+        <div class="meta">
+          <span>By Davao Civic Society</span>
+          <span>October 2026</span>
+          <span>Health &amp; Governance</span>
+        </div>
+      </section>
+
+      <div class="feature" aria-label="Hospital care feature image"></div>
+
+      <article class="content">
+        <div class="article">
+          <p>
+            An institution can be praised for efficiency, compliance, and public trust, yet still be questioned in the face of a tragedy. That is the tension now confronting the public: a hospital can hold a high performance rating, but the real test of accountability is not found in a statistic alone. It is found in how an institution responds when families say something went wrong.
+          </p>
+
+          <p>
+            In Davao and beyond, communities are increasingly aware that public ratings, awards, and institutional branding do not erase the pain of families who say a life could have been saved. When a newborn dies and the family alleges delayed medical attention, the conversation shifts from reputation to responsibility. And that is where the public must insist on clarity.
+          </p>
+
+          <h2>Ratings Are Meaningful Only When They Hold Up Under Scrutiny</h2>
+
+          <p>
+            A 96% hospital rating signals a strong level of performance on paper. But numbers are not a substitute for accountability. A score can reflect how a hospital is assessed across metrics such as staffing, process compliance, operational standards, and patient management. Yet those same metrics do not answer the essential question: what happened in the moments before the tragedy, and were the warning signs recognized and acted upon quickly enough?
+          </p>
+
+          <p>
+            Public trust is not built on labels. It is built on evidence, consistency, and the willingness to explain what happened when the system failed or appeared to fail. If the public is to believe in the institution, it must be able to see not only that the hospital has strong formal performance indicators, but that it also responds with honesty and urgency when serious concerns emerge.
+          </p>
+
+          <blockquote>
+            A hospital’s reputation is measured in both performance and accountability. One cannot replace the other.
+          </blockquote>
+
+          <h2>When Families Speak, the Public Listens</h2>
+
+          <p>
+            The death of an infant is not a routine concern for a hospital’s quality assurance process. It is a deeply personal loss that raises immediate and serious questions: Were there delays in triage? Did the child receive timely assessment? Were the medical staff adequately prepared to act? Was the family informed clearly and at the right time? These are not accusations made lightly. They are basic questions of care, responsibility, and verifiable process.
+          </p>
+
+          <p>
+            Families often raise concerns not because they seek attention, but because they are looking for a reasoned explanation. In a crisis, silence can be interpreted as defensiveness. Explanation can be the first step toward trust. Even when controversy surrounds a case, the public deserves a transparent accounting of what happened, what was reviewed, and what actions have been taken to prevent a repeat.
+          </p>
+
+          <div class="callout">
+            Healthcare is not only about outcomes on a chart. It is about whether the system responds with urgency, compassion, and accountability when lives are at risk.
+          </div>
+
+          <h2>Why the Public Must Demand More Than Reassurance</h2>
+
+          <p>
+            Institutions facing public scrutiny often attempt to reassure the audience with calm language, carefully framed statements, and procedural explanations. Those responses may be sincere, but they are not enough. The public does not ask for perfection. It asks for truth. It asks whether there were delays, whether protocols were followed, whether warnings were ignored, and whether the institution has learned from the case.
+          </p>
+
+          <p>
+            The issue is not simply whether the hospital has a good score. The issue is whether that score reflects reality in the moments that matter most. If an institution is truly confident in its standards, it should be equally comfortable opening its process to independent review, providing clear timelines, and explaining the precise steps it is taking to protect patients.
+          </p>
+
+          <h2>Accountability Must Be Visible</h2>
+
+          <p>
+            The public has every right to ask for a written account of the incident, a review of the timeline, and a clear statement of the corrective actions taken. Accountability is not merely internal. It must be visible and methodical. The best hospital systems do not hide behind complexity; they explain the process, disclose the facts they can validate, and correct the vulnerabilities they discover.
+          </p>
+
+          <p>
+            A high rating should not make a hospital immune to questions. It should make it more committed to demonstrating that the standards it proudly presents are not just numbers on paper but practices that work in real emergencies. If a hospital is truly worthy of trust, then it should be willing to satisfy the public’s basic expectation: that every life is treated as precious, and every case is examined with seriousness.
+          </p>
+
+          <h2>Truth Is the Foundation of Public Confidence</h2>
+
+          <p>
+            The public may be comforted by strong ratings, but it remains ultimately guided by what it can verify. Trust is earned when institutions show they can respond to pain without defensiveness, to criticism without contempt, and to risk without delay. In healthcare, especially, confidence depends not just on being efficient, but on being transparent and accountable when mistakes are suspected or tragedies occur.
+          </p>
+
+          <p>
+            This case should not be reduced to a debate over branding or reputational damage. It should be treated as an opportunity to ask whether institutions are prepared to prove their standards in the most difficult moments. Until those answers are clear, the public’s questions remain not only fair — they are necessary.
+          </p>
+        </div>
+      </article>
+
+      <div class="footer-note">Davao Civic Society • Truth • Accountability • Public Service</div>
+    </main>
+  </body>
+</html>
